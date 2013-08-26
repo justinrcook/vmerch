@@ -2,21 +2,44 @@
 %html
   %head
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
-      %title= content_for?(:title) ? yield(:title) : "Rails Bootstrap"
+      %title= ENV["site_name"]
       %meta{:content => content_for?(:description) ? yield(:description) : "Rails Bootstrap", :name => "description"}
         = stylesheet_link_tag "application", :media => "all"
-        = javascript_include_tag "application"
         = csrf_meta_tags
+
   %body
-    %header.navbar.navbar-fixed-top
-      %nav.navbar-inner
-        .container
-          = render 'layouts/navigation'
-    %main{:role => "main"}
-      .container
-        .content
-          .row
-            .span12
-              = render 'layouts/messages'
-              = yield
-          %footer
+    %header
+      %h1.text-center
+        = link_to "/" do
+          = image_tag "from-the-desk-of-vmerch.png", alt: "From the desk of vmerch"
+
+  %nav.navbar.navbar-default{ role: "navigation" }
+    .container
+      .navbar-header
+        %button.navbar-toggle{ type: "button", data: { toggle: "collapse", target: ".navbar-collapse" } }
+          %i.icon-bar
+          %i.icon-bar
+          %i.icon-bar
+      .collapse.navbar-collapse
+        %ul.nav.navbar-nav
+          %li
+            = link_to root_path do
+              = image_tag "home.png", alt: "Home"
+          %li= link_to "Featured", "#featured"
+          %li= link_to "Corporate", "#corporate"
+          %li= link_to "Freestyle", "#freestyle"
+          %li= link_to "Contact", "#contact"
+
+  .content.container
+    = render 'layouts/messages'
+    = yield
+
+  %footer
+    .container.text-center
+      %ul.list-inline
+        %li= mail_to "hello@vmerch.me", "say hello@vmerch.me"
+        %li= link_to "view endorsements", "#"
+        %li= link_to "download resume", "#"
+      %p= image_tag "footer-logo.png", alt: ""
+
+    = javascript_include_tag "application"
