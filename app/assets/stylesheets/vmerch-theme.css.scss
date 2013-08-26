@@ -1,0 +1,100 @@
+// Google Webfonts Lato & Lato Light
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
+
+// Boostrap
+// - import here so we have access to all the variables and mixins
+@import "bootstrap";
+
+// Bootstrap Variables
+// -------------------------
+
+// Vmerch
+// -------------------------
+$lato: 				Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$lato-light:	"Lato Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// Brand colors
+// -------------------------
+$brand-primary:         #4e3127;
+$brand-light:		        #b8ada9;
+$link-color:						$brand-primary;
+
+
+// Scaffolding
+// -------------------------
+$body-bg:               #f2efed;
+$text-color:            $brand-primary;
+
+// Typography
+// -------------------------
+$font-family-sans-serif:  $lato;
+
+// Navbar
+// -------------------------
+$navbar-border-radius: 0;
+
+header {
+	background: image-url("header-bg.jpg") center no-repeat;
+	background-size: cover;
+	min-height: 420px;
+		a {
+			img {
+				padding-top: 20px;
+			}
+		}
+
+	h1 {
+		margin: 0;
+	}
+}
+
+nav.navbar-default {
+	border-top: 4px solid $brand-primary;
+	border-width: 4px 0 1px 0;
+	font-size: $font-size-large;
+
+	&.stuck {
+		@extend .navbar-fixed-top;
+		border-top: 4px solid $brand-primary;
+	}
+
+	li.active {
+		font-color: $brand-light;
+	}
+}
+
+// Headers
+// -------------------------
+h1,h2,h3,h4,h5,h6 {
+	font-family:  $lato-light;
+	font-weight: 300;
+
+	&.bordered {
+		padding-bottom: 5px;
+		border-bottom: 1px solid $brand-light;
+	}
+}
+
+footer {
+	background: image-url("footer-bg.jpg");
+	padding: 40px 0;
+
+	li {
+		border-right: 1px solid;
+		&:last-child {
+			border: none;
+		}
+	}
+
+	a {
+		color: $brand-primary;
+		font-size: ($font-size-base * 1.1);
+	}
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	footer {
+		//background-image: url("/preview/html/img/footer-bg_2x.jpg");
+		//background-size: 100%;
+	}
+}
