@@ -33,10 +33,11 @@ $font-family-sans-serif:  $lato;
 // -------------------------
 $navbar-border-radius: 0;
 
-header {
+header.jumbotron {
 	background: image-url("header-bg.jpg") center no-repeat;
 	background-size: cover;
 	min-height: 420px;
+	margin-bottom: 0;
 		a {
 			img {
 				padding-top: 20px;
