@@ -1,21 +1,20 @@
-%h1 Listing categories
+%h1 Categories
+%p
+  %i.glyphicon.glyphicon-plus-sign
+  = link_to 'New Category', new_category_path
 
-%table
-  %tr
-    %th Name
-    %th Layout
-    %th
-    %th
-    %th
-
-  - @categories.each do |category|
+%table.table
+  %thead
     %tr
-      %td= category.name
-      %td= category.layout
-      %td= link_to 'Show', category
-      %td= link_to 'Edit', edit_category_path(category)
-      %td= link_to 'Destroy', category, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %th Name
+      %th Layout
+      %th{ colspan: 2 } Actions
 
-%br
-
-= link_to 'New Category', new_category_path
+  %tbody
+    - @categories.each do |category|
+      %tr
+        %td= link_to category.name, category
+        %td= category.layout
+        %td= link_to 'Edit', edit_category_path(category), class: "btn btn-primary"
+        %td= link_to 'Destroy', category, method: :delete, class: "btn btn-danger",
+          data: { confirm: 'Are you sure?' }
