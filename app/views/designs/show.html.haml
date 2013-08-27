@@ -1,5 +1,3 @@
-%p#notice= notice
-
 %p
   %b Name:
   = @design.name
@@ -8,10 +6,10 @@
   = @design.description
 %p
   %b Category:
-  = @design.category
+  = @design.category.name
 %p
-  %b Slug:
-  = @design.slug
+  %b image:
+  = image_tag @design.image
 
 = link_to 'Edit', edit_design_path(@design)
 \|

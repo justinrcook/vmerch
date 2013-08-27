@@ -64,11 +64,11 @@ class DesignsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_design
-      @design = Design.find(params[:id])
+      @design = Design.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def design_params
-      params.require(:design).permit(:name, :description, :category_id, :slug)
+      params.require(:design).permit(:name, :description, :category_id, :image)
     end
 end
