@@ -1,0 +1,18 @@
+%h1 Designs
+%p= link_to 'New Design', new_design_path
+
+%table.table
+  %thead
+    %tr
+      %th Name
+      %th Category
+      %th{ colspan: 2 } Actions
+
+  %tbody
+    - @designs.each do |design|
+      %tr
+        %td= link_to design.name, design
+        %td= design.category
+        %td= link_to 'Edit', edit_design_path(design), class: 'btn btn-primary'
+        %td= link_to 'Destroy', design, method: :delete, class: 'btn btn-danger',
+          data: { confirm: 'Are you sure?' }

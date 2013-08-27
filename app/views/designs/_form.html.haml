@@ -1,0 +1,10 @@
+= simple_form_for(@design) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :description, as: :text
+    = f.association :category
+
+  .form-actions
+    = f.button :submit

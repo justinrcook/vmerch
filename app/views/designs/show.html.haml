@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @design.name
+%p
+  %b Description:
+  = @design.description
+%p
+  %b Category:
+  = @design.category
+%p
+  %b Slug:
+  = @design.slug
+
+= link_to 'Edit', edit_design_path(@design)
+\|
+= link_to 'Back', designs_path
