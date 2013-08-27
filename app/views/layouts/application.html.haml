@@ -8,10 +8,11 @@
         = csrf_meta_tags
 
   %body
-    %header
-      %h1.text-center
-        = link_to "/" do
-          = image_tag "from-the-desk-of-vmerch.png", alt: "From the desk of vmerch"
+    %header.jumbotron
+      .container
+        %h1.text-center
+          = link_to "/" do
+            = image_tag "from-the-desk-of-vmerch.png", alt: "From the desk of vmerch"
 
   %nav.navbar.navbar-default{ role: "navigation" }
     .container
@@ -25,9 +26,8 @@
           %li
             = link_to root_path do
               = image_tag "home.png", alt: "Home"
-          %li= link_to "Featured", "#featured"
-          %li= link_to "Corporate", "#corporate"
-          %li= link_to "Freestyle", "#freestyle"
+          - Category.all.each do |category|
+            %li= link_to category.name, category
           %li= link_to "Contact", "#contact"
 
   .content.container
