@@ -11,13 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130827203858) do
+ActiveRecord::Schema.define(version: 20130827210813) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
     t.string   "layout"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug"
   end
+
+  add_index "categories", ["slug"], name: "index_categories_on_slug", unique: true, using: :btree
 
 end
