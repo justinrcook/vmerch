@@ -7,6 +7,14 @@ GIT
       activerecord (~> 4.0.0)
 
 GIT
+  remote: https://github.com/plataformatec/simple_form.git
+  revision: f0b95cb9805ebc895947cafaf33a07b67eeb8c71
+  specs:
+    simple_form (3.0.0.rc)
+      actionpack (>= 4.0.0, < 4.1)
+      activemodel (>= 4.0.0, < 4.1)
+
+GIT
   remote: https://github.com/thomas-mcdonald/bootstrap-sass
   revision: 1344c58711e9ba30cbbd028908ea3fe6df73969d
   branch: 3
@@ -125,9 +133,6 @@ GEM
       sass (>= 3.1.10)
       sprockets-rails (~> 2.0.0)
     sexp_processor (4.3.0)
-    simple_form (3.0.0.rc)
-      actionpack (>= 4.0.0.rc1, < 4.1)
-      activemodel (>= 4.0.0.rc1, < 4.1)
     sprockets (2.10.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -171,6 +176,6 @@ DEPENDENCIES
   quiet_assets
   rails (= 4.0.0)
   sass-rails (~> 4.0.0)
-  simple_form (>= 3.0.0.rc)
+  simple_form (>= 3.0.0.rc)!
   turbolinks
   uglifier (>= 1.3.0)
