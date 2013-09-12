@@ -1,5 +1,5 @@
 Vmerch::Application.routes.draw do
-  resources :designs
-  resources :categories, path: '/'
-  root :to => 'visitors#new'
+  resources :designs, path: '/design/'
+  resources :categories, path: '/category'
+  root :to => 'categories#show', id: 'featured'
 end
