@@ -6,4 +6,8 @@ class Design < ActiveRecord::Base
 
   # CarrierWave
   mount_uploader :image, DesignUploader
+
+  def should_generate_new_friendly_id?
+    name_changed?
+  end
 end
