@@ -2,8 +2,11 @@
 %html
   %head
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
-      %title= ENV["site_name"]
-      %meta{:content => content_for?(:description) ? yield(:description) : "Rails Bootstrap", :name => "description"}
+      %title
+        = yield(:title) || "Untitled"
+        &ndash;
+        = ENV["site_name"]
+      %meta{:content => content_for?(:description) ? yield(:description) : "", :name => "description"}
         = stylesheet_link_tag "application", :media => "all"
         = csrf_meta_tags
 
@@ -31,6 +34,7 @@
           %li= link_to "Contact", "#contact"
 
   .content.container
+    = render 'layouts/heading'
     = render 'layouts/messages'
     = yield
 
