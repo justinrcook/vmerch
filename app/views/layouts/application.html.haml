@@ -30,7 +30,7 @@
             = link_to root_path do
               = image_tag "home.png", alt: "Home"
           - Category.all.each do |category|
-            %li= link_to category.name, category.slug
+            %li= link_to category.name, "/#{category.slug}"
           %li= link_to "Contact", "#contact"
 
   .content.container
