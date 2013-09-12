@@ -1,5 +1,5 @@
 Vmerch::Application.routes.draw do
   resources :designs
-  resources :categories
+  resources :categories, path: '/'
   root :to => 'visitors#new'
 end
