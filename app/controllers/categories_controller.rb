@@ -10,6 +10,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
+    @designs = @category.designs.order("created_at DESC")
   end
 
   # GET /categories/new
