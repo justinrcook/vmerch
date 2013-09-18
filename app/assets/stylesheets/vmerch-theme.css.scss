@@ -10,28 +10,33 @@
 
 // Vmerch
 // -------------------------
-$lato: 				Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-$lato-light:	"Lato Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-lato: 				Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-lato-light:	"Lato Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 // Brand colors
 // -------------------------
 $brand-primary:         #4e3127;
 $brand-light:		        #b8ada9;
+$brand-bg:							#f2efed;
 $link-color:						$brand-primary;
 
 
 // Scaffolding
 // -------------------------
-$body-bg:               #f2efed;
+$body-bg:               $brand-bg;
 $text-color:            $brand-primary;
 
 // Typography
 // -------------------------
-$font-family-sans-serif:  $lato;
+$font-family-sans-serif:  $font-family-lato;
 
 // Navbar
 // -------------------------
 $navbar-border-radius: 0;
+
+body, .panel {
+	background-color: $body-bg;
+}
 
 header.jumbotron {
 	background: image-url("header-bg.jpg") center no-repeat;
@@ -41,6 +46,7 @@ header.jumbotron {
 		a {
 			img {
 				padding-top: 20px;
+				margin: 0 auto;
 			}
 		}
 
@@ -66,15 +72,16 @@ nav.navbar-default {
 
 // Headers
 // -------------------------
+.page-header {
+	margin: ($line-height-computed / 2) 0;
+	border-bottom: 1px solid $brand-light;
+	padding-bottom: ($line-height-computed / 4);
+}
+
 h1,h2,h3,h4,h5,h6 {
-	font-family:  $lato-light;
+	font-family:  $font-family-lato-light;
 	font-weight: 300;
 	color: $brand-primary;
-
-	&.bordered {
-		padding-bottom: 5px;
-		border-bottom: 1px solid $brand-light;
-	}
 }
 
 footer {
@@ -93,6 +100,15 @@ footer {
 		font-size: ($font-size-base * 1.1);
 	}
 }
+
+// Two column design layout
+// -------------------------
+.two_column {
+	.panel {
+		width: 48%;
+	}
+}
+
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
 	footer {
