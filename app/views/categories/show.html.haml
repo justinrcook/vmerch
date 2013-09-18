@@ -1,12 +1,13 @@
-%p#notice= notice
+- title @category.name
+
+- if @category.single_column?
+	= render @category.designs
+- elsif @category.two_column?
+	.two_column
+		- @category.designs.each do |design|
+			= render design
 
 %p
-  %b Name:
-  = @category.name
-%p
-  %b Layout:
-  = @category.layout
-
-= link_to 'Edit', edit_category_path(@category)
-\|
-= link_to 'Back', categories_path
+	= link_to 'Edit', edit_category_path(@category)
+	\|
+	= link_to 'Back', categories_path
