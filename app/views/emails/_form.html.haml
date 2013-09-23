@@ -1,10 +1,21 @@
-= simple_form_for(@email) do |f|
-  = f.error_notification
-
-  .form-inputs
-    = f.input :name
-    = f.input :email
-    = f.input :message
-
-  .form-actions
-    = f.button :submit
+.col-md-4
+	= simple_form_for(@email, html: { role: 'form' }) do |f|
+		= f.error_notification
+		.form-group
+			= f.input :name, label_html: { class: 'sr-only' }, input_html: { placeholder: '*Name', class: 'input-lg'}
+			= f.input :email, label_html: { class: 'sr-only' }, input_html: { placeholder: '*Email', class: 'input-lg'}
+			= f.input :message, as: :text, label_html: { class: 'sr-only' },
+				input_html: { placeholder: '*Message', rows: 5, class: 'input-lg'}
+			= f.button :submit, 'Send message', class: 'btn btn-primary btn-lg btn-block'
+.col-md-4
+	%p
+		Ahoy fellow interneters. Thanks for stopping by.
+		I love good typography, unique illustration and have
+		a soft spot for owls and my wiener dog, Caslon.
+		*I prefer Mt. Dew over coffee, have an eye for fine details
+		and can never pass up an opportunity to  make a good play on words.
+	%p
+		I am currently taking small freelance requests, so give me a shout!
+.col-md-4
+	.text-right
+		%p= image_tag 'profile.jpg', alt: 'Vmerch Profile Pic'
