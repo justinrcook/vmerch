@@ -34,6 +34,12 @@ $font-family-sans-serif:  $font-family-lato;
 // -------------------------
 $navbar-border-radius: 0;
 
+// Alerts
+// -------------------------
+.alert-error {
+	@extend .alert-danger;
+}
+
 body, .panel {
 	background-color: $body-bg;
 }
