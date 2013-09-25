@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Vmerch::Application.config.secret_key_base = '3faa5241e0ddbc7d70e201199118c3363d2629077b1020f8cdd5dd645e2c43277331ae5c7c62e4023eabcd52f3bd45d7057223c64fc51b11644fc0f97e2e92c9'
+Vmerch::Application.config.secret_key_base = ENV['secret_token']
