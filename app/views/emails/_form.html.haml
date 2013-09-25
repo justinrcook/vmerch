@@ -7,15 +7,19 @@
 			= f.input :message, as: :text, label_html: { class: 'sr-only' },
 				input_html: { placeholder: '*Message', rows: 5, class: 'input-lg'}
 			= f.button :submit, 'Send message', class: 'btn btn-primary btn-lg btn-block'
-.col-md-4
+.col-md-5
 	%p
 		Ahoy fellow interneters. Thanks for stopping by.
 		I love good typography, unique illustration and have
 		a soft spot for owls and my wiener dog, Caslon.
 		*I prefer Mt. Dew over coffee, have an eye for fine details
 		and can never pass up an opportunity to  make a good play on words.
-	%p
-		I am currently taking small freelance requests, so give me a shout!
-.col-md-4
-	.text-right
-		%p= image_tag 'profile.jpg', alt: 'Vmerch Profile Pic', class: 'profile-photo'
+	%p I am currently taking small freelance requests, so give me a shout!
+
+	%ul.list-unstyled
+		%li.hello= mail_to 'hello@vmerch.me', 'Say hello@vmerch.me'
+		%li.endorsements= link_to 'View my endorsements', '#'
+		%li.tweet= link_to 'Tweet-a-lee, tweet', '//twitter.com/valeriemerchant'
+
+.col-md-3
+	= image_tag 'profile.jpg', alt: 'Vmerch Profile Pic', class: 'profile-photo'
