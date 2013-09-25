@@ -20,7 +20,6 @@ $brand-light:		        #b8ada9;
 $brand-bg:							#f2efed;
 $link-color:						$brand-primary;
 
-
 // Scaffolding
 // -------------------------
 $body-bg:               $brand-bg;
@@ -38,6 +37,12 @@ $navbar-border-radius: 0;
 // -------------------------
 .alert-error {
 	@extend .alert-danger;
+}
+
+// Profile Photo
+// -------------------------
+img.profile-photo {
+	border: 1px solid $brand-light;
 }
 
 body, .panel {
