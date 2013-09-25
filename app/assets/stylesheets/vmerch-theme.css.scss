@@ -15,6 +15,7 @@ $font-family-lato-light:	"Lato Light", "Helvetica Neue", Helvetica, Arial, sans-
 $brand-primary:         #4e3127;
 $brand-light:		        #b8ada9;
 $brand-bg:							#f2efed;
+$brand-alternate:				#00c5c0;
 $link-color:						$brand-primary;
 
 // Scaffolding
@@ -34,12 +35,6 @@ $navbar-border-radius: 0;
 // -------------------------
 .alert-error {
 	@extend .alert-danger;
-}
-
-// Profile Photo
-// -------------------------
-img.profile-photo {
-	border: 1px solid $brand-light;
 }
 
 // Boostrap
@@ -88,13 +83,39 @@ nav.navbar-default {
 .page-header {
 	margin: ($line-height-computed / 2) 0;
 	border-bottom: 1px solid $brand-light;
-	padding-bottom: ($line-height-computed / 4);
+	padding-bottom: 0;
+
+	h2 {
+		margin-bottom: 5px;
+	}
 }
 
 h1,h2,h3,h4,h5,h6 {
 	font-family:  $font-family-lato-light;
 	font-weight: 300;
 	color: $brand-primary;
+}
+
+
+// Profile Photo
+// -------------------------
+img.profile-photo {
+	border: 1px solid $brand-light;
+}
+
+// New Email (Contact Form)
+// -------------------------
+.new_email {
+	// All straight corners here
+	input, textarea {
+		border-radius: 0;
+	}
+
+	input.btn {
+		@include button-variant(#fff, $brand-alternate, $brand-alternate);
+		text-align: left;
+		padding-left: $line-height-computed;
+	}
 }
 
 footer {
