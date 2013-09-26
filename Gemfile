@@ -22,6 +22,5 @@ group :development do
   gem 'quiet_assets'
 	gem 'capistrano', github: 'capistrano/capistrano', branch: 'v3'
 	gem 'capistrano-rails'
-	gem 'capistrano-rbenv'
 	gem 'capistrano-bundler', github: 'capistrano/bundler'
 end
