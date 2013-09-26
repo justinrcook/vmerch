@@ -24,3 +24,8 @@ group :development do
 	gem 'capistrano-rails'
 	gem 'capistrano-bundler', github: 'capistrano/bundler'
 end
+
+group :production do
+	gem 'rails_12factor'
+	gem 'pg'
+end
