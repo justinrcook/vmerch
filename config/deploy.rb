@@ -1,20 +1,19 @@
-set :application, 'my app name'
-set :repo_url, 'git@example.com:me/my_repo.git'
+set :application, 'vmerch'
+set :repo_url, 'https://github.com/justinrcook/vmerch.git'
 
-# ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
+# Deploy/SSH Config
+# ==================
+set :scm, :git
+set :ssh_options, {
+  user: 'justinrcook',
+  host_name: 'cooksidingsupply.com'
+}
+set :branch, 'master'
+set :keep_releases, 3
 
-# set :deploy_to, '/var/www/my_app'
-# set :scm, :git
-
-# set :format, :pretty
-# set :log_level, :debug
-# set :pty, true
-
-# set :linked_files, %w{config/database.yml}
-# set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
-
-# set :default_env, { path: "/opt/ruby/bin:$PATH" }
-# set :keep_releases, 5
+## Linked Files
+# ==================
+#set :linked_files, %w{config/database.yml config/application.yml}
 
 namespace :deploy do
 
@@ -35,6 +34,8 @@ namespace :deploy do
     end
   end
 
+  before 'config:upload', 'config:create_shared_config'
+  after :starting, 'config:upload'
   after :finishing, 'deploy:cleanup'
 
 end

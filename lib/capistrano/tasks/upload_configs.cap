@@ -1,0 +1,23 @@
+namespace	:config do
+
+	desc "Create shared config directory"
+	task :create_shared_config do
+		on roles :all do
+			if test " [ -d #{fetch(:shared_config_path)} ] "
+				info "Shared config path already exists"
+			else
+				info "Shared config path does not exist, creating"
+				execute :mkdir, '-p', fetch(:shared_config_path)
+			end
+		end
+	end
+
+  desc "Upload configs to application that aren't in repo"
+  task :upload do
+  	on roles :all do
+  		upload! "config/application.yml", "#{fetch(:shared_config_path)}/application.yml"
+  		upload! "config/database.yml", "#{fetch(:shared_config_path)}/database.yml"
+  	end
+	end
+
+end
