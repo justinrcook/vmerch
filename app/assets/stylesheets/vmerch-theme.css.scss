@@ -16,16 +16,18 @@ $brand-primary:         #4e3127;
 $brand-light:		        #b8ada9;
 $brand-bg:							#f2efed;
 $brand-alternate:				#00c5c0;
-$link-color:						$brand-primary;
+$brand-text-color:			#5E5F60;
+$link-color:						$brand-alternate;
 
 // Scaffolding
 // -------------------------
 $body-bg:               $brand-bg;
-$text-color:            $brand-primary;
+$text-color:            $brand-text-color;
 
 // Typography
 // -------------------------
-$font-family-sans-serif:  $font-family-lato;
+$font-family-base:  $font-family-lato;
+$font-size-base: 15px !default;
 
 // Navbar
 // -------------------------
