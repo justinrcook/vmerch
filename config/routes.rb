@@ -1,5 +1,6 @@
 Vmerch::Application.routes.draw do
   resources :emails
+  get 'contact', to: 'emails#new'
 
   resources :designs, path: '/design/'
   resources :categories
