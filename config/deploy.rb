@@ -15,6 +15,11 @@ set :keep_releases, 3
 # ==================
 #set :linked_files, %w{config/database.yml config/application.yml}
 
+## Rbenv Config
+# ==================
+set :rbenv_type, :user
+set :rbenv_ruby, '2.0.0-p247'
+
 namespace :deploy do
 
   desc 'Restart application'
