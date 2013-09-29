@@ -13,7 +13,8 @@ set :keep_releases, 3
 
 ## Linked Files
 # ==================
-#set :linked_files, %w{config/database.yml config/application.yml}
+set :linked_files, %w{config/database.yml config/application.yml}
+set :linked_folders, %w{public/uploads}
 
 ## Rbenv Config
 # ==================
