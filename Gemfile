@@ -21,6 +21,12 @@ group :development do
   gem 'html2haml'
   gem 'quiet_assets'
 	gem 'capistrano', github: 'capistrano/capistrano', branch: 'v3'
+	gem 'capistrano-rbenv', github: "capistrano/rbenv"
 	gem 'capistrano-rails'
 	gem 'capistrano-bundler', github: 'capistrano/bundler'
+end
+
+group :production do
+	gem 'execjs'
+	gem 'therubyracer', require: 'v8'
 end
