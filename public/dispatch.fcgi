@@ -4,8 +4,8 @@
 ## - https://github.com/dre3k/rails3_fcgi/blob/master/public/rails3_fcgi.fcgi
 
 ENV['RAILS_ENV'] = 'production'
-ENV['HOME'] ||= File.expand_path('~/websites/vmerch.me/beta')
-ENV['GEM_HOME'] = File.expand_path('~/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0')
+ENV['HOME'] ||= '~/websites/vmerch.me/beta'
+ENV['GEM_HOME'] = '~/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0'
 ENV['GEM_PATH'] = ENV['GEM_HOME']
 
 # Needed to install fcgi into the global gems rather than in the
