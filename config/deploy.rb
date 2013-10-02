@@ -8,13 +8,13 @@ set :ssh_options, {
   user: 'justinrcook',
   host_name: 'cooksidingsupply.com'
 }
-set :branch, 'master'
+set :branch, 'dreamhost'
 set :keep_releases, 3
 
 ## Linked Files
 # ==================
 set :linked_files, %w{config/database.yml config/application.yml}
-set :linked_folders, %w{public/uploads}
+set :linked_dirs, %w{public/uploads log}
 
 ## Rbenv Config
 # ==================
