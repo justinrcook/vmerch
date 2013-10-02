@@ -8,7 +8,7 @@ set :ssh_options, {
   user: 'justinrcook',
   host_name: 'cooksidingsupply.com'
 }
-set :branch, 'dreamhost'
+set :branch, 'master'
 set :keep_releases, 3
 
 ## Linked Files
