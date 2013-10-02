@@ -31,7 +31,7 @@
               = image_tag "home.png", alt: "Home"
           - Category.all.each do |category|
             %li= link_to category.name, "/#{category.slug}"
-          %li= link_to "Contact", "#contact"
+          %li= link_to "Contact", contact_path
 
   .content.container
     = render 'layouts/heading'
