@@ -1,0 +1,11 @@
+- title 'Sign in', false
+
+.row
+	.col-md-6.col-md-offset-3
+		= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+			%h2.form-signin-header Please sign in
+			= f.input :email, autofocus: true, placeholder: 'Email Address'
+			= f.input :password, placeholder: 'Password'
+			= f.button :submit, 'Sign in', class: 'btn btn-primary btn-lg btn-block'
+
+		= render partial: 'devise/shared/links'
