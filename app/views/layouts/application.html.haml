@@ -1,14 +1,14 @@
 !!!
 %html
   %head
+    %title
+      = yield(:title) || "Untitled"
+      &ndash;
+      = ENV["site_name"]
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
-      %title
-        = yield(:title) || "Untitled"
-        &ndash;
-        = ENV["site_name"]
-      %meta{:content => content_for?(:description) ? yield(:description) : "", :name => "description"}
-      = stylesheet_link_tag "application", :media => "all"
-      = csrf_meta_tags
+    %meta{:content => content_for?(:description) ? yield(:description) : "", :name => "description"}
+    = csrf_meta_tags
+    = stylesheet_link_tag "application", :media => "all"
 
   %body
     %header.jumbotron
