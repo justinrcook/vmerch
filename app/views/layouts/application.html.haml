@@ -9,6 +9,7 @@
     %meta{:content => content_for?(:description) ? yield(:description) : "", :name => "description"}
     = csrf_meta_tags
     = stylesheet_link_tag "application", :media => "all"
+    = favicon_link_tag '/favicon.ico'
 
   %body
     %header.jumbotron
