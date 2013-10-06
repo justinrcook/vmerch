@@ -7,8 +7,8 @@
         &ndash;
         = ENV["site_name"]
       %meta{:content => content_for?(:description) ? yield(:description) : "", :name => "description"}
-        = stylesheet_link_tag "application", :media => "all"
-        = csrf_meta_tags
+      = stylesheet_link_tag "application", :media => "all"
+      = csrf_meta_tags
 
   %body
     %header.jumbotron
