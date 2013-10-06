@@ -1,4 +1,5 @@
 Vmerch::Application.routes.draw do
+  devise_for :users
   resources :emails
   get 'contact', to: 'emails#new'
 

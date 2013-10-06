@@ -14,6 +14,7 @@ gem 'haml-rails'
 gem 'simple_form', '>= 3.0.0.rc', git: 'https://github.com/plataformatec/simple_form.git'
 gem 'friendly_id', github: 'FriendlyId/friendly_id', branch: 'master'
 gem 'carrierwave'
+gem 'devise'
 
 group :development do
   gem 'better_errors'
