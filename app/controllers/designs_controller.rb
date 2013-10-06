@@ -1,4 +1,5 @@
 class DesignsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_design, only: [:show, :edit, :update, :destroy]
 
   # GET /designs
