@@ -16,4 +16,10 @@
 //= require bootstrap
 //= require masonry.pkgd.min.3.1.2
 //= require imagesloaded.pkgd.min.3.0.4.js
+//= require waypoints
+//= require waypoints-sticky
 //= require_tree .
+
+$('nav').waypoint('sticky', {
+	offset: 50
+});
