@@ -1,16 +1,8 @@
-%p
-  %b Name:
-  = @design.name
-%p
-  %b Description:
-  = @design.description
-%p
-  %b Category:
-  = @design.category.name
-%p
-  %b image:
-  = image_tag @design.image
+- title @design.name
+= render @design
 
-= link_to 'Edit', edit_design_path(@design)
-\|
-= link_to 'Back', designs_path
+- if user_signed_in?
+	%p
+		= link_to 'Edit design', edit_design_path(@design), class: 'btn btn-primary'
+		= link_to 'Destroy', @design, method: :delete, class: 'btn btn-danger',
+			data: { confirm: 'Are you sure?' }
