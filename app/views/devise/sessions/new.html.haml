@@ -4,8 +4,8 @@
 	.col-md-6.col-md-offset-3
 		= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
 			%h2.form-signin-header Please sign in
-			= f.input :email, autofocus: true, placeholder: 'Email Address'
-			= f.input :password, placeholder: 'Password'
+			= f.input :email, autofocus: true, placeholder: 'Email Address', label_html: { class: 'sr-only' }
+			= f.input :password, placeholder: 'Password', label_html: { class: 'sr-only' }
 			= f.button :submit, 'Sign in', class: 'btn btn-primary btn-lg btn-block'
 
-		= render partial: 'devise/shared/links'
+= render partial: 'devise/shared/links'
