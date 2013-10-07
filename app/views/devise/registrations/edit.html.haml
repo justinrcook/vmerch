@@ -1,0 +1,15 @@
+-title 'Update your Information'
+= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name),
+	:html => { :method => :put }) do |f|
+
+	.row
+		.col-md-6
+			= f.input :email, required: true
+			= f.input :password, autocomplete: 'off', required: false,
+				hint: "leave it blank if you don't want to change it"
+			= f.input :password_confirmation, required: false
+			= f.input :current_password, required: true,
+				hint: 'we need your current password to confirm your changes'
+			.form-group
+				= f.submit 'Update', class: 'btn btn-primary'
+				= link_to 'Cancel', home_path, class: 'btn btn-link'
