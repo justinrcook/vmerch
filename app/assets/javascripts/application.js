@@ -13,7 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap
+//= require bootstrap/alert
+//= require bootstrap/button
+//= require bootstrap/collapse
+//= require bootstrap/transition
 //= require masonry.pkgd.min.3.1.2
 //= require imagesloaded.pkgd.min.3.0.4.js
 //= require waypoints
