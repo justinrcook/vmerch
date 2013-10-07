@@ -39,6 +39,12 @@
     = render 'layouts/messages'
     = yield
 
+    - if user_signed_in?
+      %p.pull-right
+        = "Logged in as #{current_user.email}"
+        |
+        = link_to 'Sign out', destroy_user_session_path, :method => :delete, :rel => 'nofollow'
+
   %footer
     .container.text-center
       %ul.list-inline
