@@ -51,7 +51,7 @@ body, .panel {
 header.jumbotron {
 	background: image-url("header-bg.jpg") center no-repeat;
 	background-size: cover;
-	min-height: 420px;
+	min-height: 220px;
 	margin-bottom: 0;
 		a {
 			img {
@@ -62,6 +62,20 @@ header.jumbotron {
 
 	h1 {
 		margin: 0;
+	}
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm) {
+	header.jumbotron {
+		min-height: 320px;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md) {
+	header.jumbotron {
+		min-height: 420px;
 	}
 }
 
