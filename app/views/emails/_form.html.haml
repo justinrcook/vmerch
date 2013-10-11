@@ -1,25 +1,26 @@
-.col-md-4
-	= simple_form_for(@email, html: { role: 'form' }) do |f|
-		= f.error_notification
-		= f.input :name, label_html: { class: 'sr-only' }, input_html: { placeholder: '*Name', class: 'input-lg'}
-		= f.input :email, label_html: { class: 'sr-only' }, input_html: { placeholder: '*Email', class: 'input-lg'}
-		= f.input :message, as: :text, label_html: { class: 'sr-only' },
-			input_html: { placeholder: '*Message', rows: 5, class: 'input-lg'}
-		.form-group
-			= f.button :submit, 'Send Message', class: 'btn btn-lg btn-block'
-.col-md-5
-	%p
-		Ahoy fellow interneters. Thanks for stopping by.
-		I love good typography, unique illustration and have
-		a soft spot for owls and my wiener dog, Caslon.
-		*I prefer Mt. Dew over coffee, have an eye for fine details
-		and can never pass up an opportunity to  make a good play on words.
-	%p I am currently taking small freelance requests, so give me a shout!
+.row
+	.col-md-4
+		= simple_form_for(@email, html: { role: 'form' }) do |f|
+			= f.error_notification
+			= f.input :name, label_html: { class: 'sr-only' }, input_html: { placeholder: '*Name', class: 'input-lg'}
+			= f.input :email, label_html: { class: 'sr-only' }, input_html: { placeholder: '*Email', class: 'input-lg'}
+			= f.input :message, as: :text, label_html: { class: 'sr-only' },
+				input_html: { placeholder: '*Message', rows: 5, class: 'input-lg'}
+			.form-group
+				= f.button :submit, 'Send Message', class: 'btn btn-lg btn-block'
+	.col-md-5
+		%p
+			Ahoy fellow interneters. Thanks for stopping by.
+			I love good typography, unique illustration and have
+			a soft spot for owls and my wiener dog, Caslon.
+			*I prefer Mt. Dew over coffee, have an eye for fine details
+			and can never pass up an opportunity to  make a good play on words.
+		%p I am currently taking small freelance requests, so give me a shout!
 
-	%ul.list-unstyled.shoutout
-		%li.hello= mail_to 'hello@vmerch.me', 'Say hello@vmerch.me'
-		%li.endorsements= link_to 'View my endorsements', '//www.linkedin.com/in/valeriemerchant'
-		%li.tweet= link_to 'Tweet-a-lee, tweet', '//twitter.com/valeriemerchant'
+		%ul.list-unstyled.shoutout
+			%li.hello= mail_to 'hello@vmerch.me', 'Say hello@vmerch.me'
+			%li.endorsements= link_to 'View my endorsements', '//www.linkedin.com/in/valeriemerchant'
+			%li.tweet= link_to 'Tweet-a-lee, tweet', '//twitter.com/valeriemerchant'
 
-.col-md-3
-	= image_tag "#{ENV['image_assets_url']}/profile.jpg", alt: 'Vmerch Profile Pic', class: 'profile-photo'
+	.col-md-3
+		= image_tag "#{ENV['image_assets_url']}/profile.jpg", alt: 'Vmerch Profile Pic', class: 'profile-photo'
