@@ -15,7 +15,7 @@
     %header.jumbotron
       .container
         %h1.text-center
-          = link_to "/" do
+          = link_to (user_signed_in? ? home_path : root_path) do
             = image_tag "#{ENV['image_assets_url']}/from-the-desk-of-vmerch-v2.png", alt: "From the desk of vmerch", class: "img-responsive"
 
   %nav.navbar.navbar-default{ role: "navigation" }
@@ -28,7 +28,7 @@
       .collapse.navbar-collapse
         %ul.nav.navbar-nav
           %li
-            = link_to root_path do
+            = link_to (user_signed_in? ? home_path : root_path) do
               = image_tag "#{ENV['image_assets_url']}/home.png", alt: "Home"
           - Category.all.each do |category|
             %li= link_to category.name, "/#{category.slug}"
