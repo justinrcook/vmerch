@@ -29,7 +29,7 @@ class DesignsController < ApplicationController
 
     respond_to do |format|
       if @design.save
-        format.html { redirect_to @design, notice: 'Design was successfully created.' }
+        format.html { redirect_to designs_url, notice: 'Design was successfully created.' }
         format.json { render action: 'show', status: :created, location: @design }
       else
         format.html { render action: 'new' }
@@ -43,7 +43,7 @@ class DesignsController < ApplicationController
   def update
     respond_to do |format|
       if @design.update(design_params)
-        format.html { redirect_to @design, notice: 'Design was successfully updated.' }
+        format.html { redirect_to designs_url, notice: 'Design was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
