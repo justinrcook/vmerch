@@ -1,38 +1,28 @@
 GIT
   remote: git://github.com/FriendlyId/friendly_id.git
-  revision: 637ec7d62a56fc81dcc141ce2d1c287fa4b40055
+  revision: 59dbe5e8326af74093e215ec62411e8d6e83d948
   branch: master
   specs:
-    friendly_id (5.0.0.rc2)
+    friendly_id (5.0.1)
       activerecord (~> 4.0.0)
 
 GIT
   remote: git://github.com/capistrano/bundler.git
-  revision: c6443d5c555dadde51838f00cbdb7b730993de55
+  revision: 8c40862ef53de8d7706682f452f6ba76502864ad
   specs:
-    capistrano-bundler (0.0.1)
+    capistrano-bundler (1.0.0)
       capistrano (>= 3.0.0.pre)
 
 GIT
-  remote: git://github.com/capistrano/capistrano.git
-  revision: 78eb033290f79131a94b8a8cc74929cef41c3243
-  branch: v3
-  specs:
-    capistrano (3.0.0.pre14)
-      i18n
-      rake (>= 10.0.0)
-      sshkit (>= 0.0.23)
-
-GIT
   remote: git://github.com/capistrano/rbenv.git
-  revision: 8326795409e262b33c5e2f2ff5943a2bee0e93c8
+  revision: 362dbc02ef963c91425767e09b4848ff7be5132b
   specs:
     capistrano-rbenv (0.0.1)
       capistrano
 
 GIT
   remote: https://github.com/plataformatec/simple_form.git
-  revision: 50c4ac4a8bd0cb883ddaa309b779978e4207fef4
+  revision: 6b9e0f3d0ecde4311e511d90899f4192bea9b738
   specs:
     simple_form (3.0.0)
       actionpack (>= 4.0.0, < 4.1)
@@ -40,7 +30,7 @@ GIT
 
 GIT
   remote: https://github.com/thomas-mcdonald/bootstrap-sass
-  revision: 0e88056ac5d58fb0bbd23d3fe929eac01712d964
+  revision: 9c6c07f74ff515cf38380b014cfede14a4f0eae4
   branch: 3
   specs:
     bootstrap-sass (3.0.0.0)
@@ -82,22 +72,26 @@ GEM
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.1.4)
-    capistrano-rails (0.0.7)
+    capistrano (3.0.1)
+      i18n
+      rake (>= 10.0.0)
+      sshkit (>= 0.0.23)
+    capistrano-rails (1.0.0)
       capistrano
     carrierwave (0.9.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
       json (>= 1.7)
     coderay (1.1.0)
-    coffee-rails (4.0.0)
+    coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
-      railties (>= 4.0.0.beta, < 5.0)
+      railties (>= 4.0.0, < 5.0)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
     debug_inspector (0.0.2)
-    devise (3.1.1)
+    devise (3.2.0)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
@@ -109,7 +103,7 @@ GEM
     figaro (0.7.0)
       bundler (~> 1.0)
       rails (>= 3, < 5)
-    haml (4.0.3)
+    haml (4.1.0.alpha.2)
       tilt
     haml-rails (0.4)
       actionpack (>= 3.1, < 4.1)
@@ -124,25 +118,25 @@ GEM
       hpricot (~> 0.8.6)
       ruby_parser (~> 3.1.1)
     i18n (0.6.5)
-    jbuilder (1.5.1)
+    jbuilder (1.5.2)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
     jquery-rails (3.0.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
-    json (1.8.0)
-    libv8 (3.11.8.17)
+    json (1.8.1)
+    libv8 (3.16.14.3)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25)
     minitest (4.7.5)
     multi_json (1.8.2)
-    mysql2 (0.3.13)
+    mysql2 (0.3.14)
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
     net-ssh (2.7.0)
-    orm_adapter (0.4.0)
+    orm_adapter (0.5.0)
     polyglot (0.3.3)
     quiet_assets (1.0.2)
       railties (>= 3.1, < 5.0)
@@ -166,12 +160,12 @@ GEM
     ref (1.0.5)
     ruby_parser (3.1.3)
       sexp_processor (~> 4.1)
-    sass (3.2.10)
-    sass-rails (4.0.0)
-      railties (>= 4.0.0.beta, < 5.0)
+    sass (3.2.12)
+    sass-rails (4.0.1)
+      railties (>= 4.0.0, < 5.0)
       sass (>= 3.1.10)
       sprockets-rails (~> 2.0.0)
-    sexp_processor (4.3.0)
+    sexp_processor (4.4.0)
     sprockets (2.10.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -181,29 +175,29 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
-    sshkit (0.0.34)
+    sshkit (1.1.0)
       net-scp
       net-ssh
       term-ansicolor
     term-ansicolor (1.2.2)
       tins (~> 0.8)
-    therubyracer (0.11.4)
-      libv8 (~> 3.11.8.12)
+    therubyracer (0.12.0)
+      libv8 (~> 3.16.14.0)
       ref
     thor (0.18.1)
     thread_safe (0.1.3)
       atomic
     tilt (1.4.1)
-    tins (0.11.0)
+    tins (0.13.1)
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
     turbolinks (1.3.0)
       coffee-rails
     tzinfo (0.3.38)
-    uglifier (2.2.1)
+    uglifier (2.3.1)
       execjs (>= 0.3.0)
-      multi_json (~> 1.0, >= 1.0.2)
+      json (>= 1.8.0)
     warden (1.2.3)
       rack (>= 1.0)
 
@@ -214,7 +208,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootstrap-sass!
-  capistrano!
+  capistrano
   capistrano-bundler!
   capistrano-rails
   capistrano-rbenv!

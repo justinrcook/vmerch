@@ -21,8 +21,8 @@ group :development do
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
   gem 'html2haml'
   gem 'quiet_assets'
-	gem 'capistrano', github: 'capistrano/capistrano', branch: 'v3'
-	gem 'capistrano-rbenv', github: "capistrano/rbenv"
+	gem 'capistrano'
+	gem 'capistrano-rbenv', github: 'capistrano/rbenv'
 	gem 'capistrano-rails'
 	gem 'capistrano-bundler', github: 'capistrano/bundler'
 end
