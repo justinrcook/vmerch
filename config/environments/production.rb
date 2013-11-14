@@ -77,4 +77,11 @@ Vmerch::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  # ActionMailer Config
+  # Setup for production - deliveries, no errors raised
+  config.action_mailer.default_url_options = { host: ENV['domain'] }
+  config.action_mailer.delivery_method = :sendmail
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default charset: "utf-8"
 end
