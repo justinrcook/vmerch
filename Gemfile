@@ -22,9 +22,9 @@ group :development do
   gem 'html2haml'
   gem 'quiet_assets'
 	gem 'capistrano'
-	gem 'capistrano-rbenv', github: 'capistrano/rbenv'
+	gem 'capistrano-rbenv'
 	gem 'capistrano-rails'
-	gem 'capistrano-bundler', github: 'capistrano/bundler'
+	gem 'capistrano-bundler'
 end
 
 group :production do
