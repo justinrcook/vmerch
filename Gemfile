@@ -14,6 +14,7 @@ gem 'haml-rails'
 gem 'simple_form'
 gem 'friendly_id'
 gem 'carrierwave'
+gem 'carrierwave-ftp', require: 'carrierwave/storage/sftp'
 gem 'devise'
 
 group :development do
