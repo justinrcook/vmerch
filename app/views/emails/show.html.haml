@@ -1,4 +1,4 @@
-%p#notice= notice
+- title "Email from #{@email.name}"
 
 %p
   %b Name:
@@ -10,6 +10,8 @@
   %b Message:
 = simple_format @email.message
 
-= link_to 'Edit', edit_email_path(@email)
-\|
-= link_to 'Back', emails_path
+- if user_signed_in?
+  %p
+    = link_to 'Edit email', edit_email_path(@email), class: 'btn btn-primary'
+    = link_to 'Destroy', @email, method: :delete, class: 'btn btn-danger',
+      data: { confirm: 'Are you sure?' }
