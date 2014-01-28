@@ -91,7 +91,7 @@ Vmerch::Application.configure do
     :domain               => ENV['smtp_domain'],
     :user_name            => ENV['smtp_user_name'],
     :password             => ENV['smtp_password'],
-    :authentication       => ENV['smtp_authentication'],
+    :authentication       => :plain,
     :enable_starttls_auto => true
   }
 
