@@ -84,4 +84,16 @@ Vmerch::Application.configure do
   config.action_mailer.delivery_method = :sendmail
   config.action_mailer.perform_deliveries = true
   config.action_mailer.default charset: "utf-8"
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address              => ENV['smtp_domain'],
+    :port                 => ENV['smtp_port'],
+    :domain               => ENV['smtp_domain'],
+    :user_name            => ENV['smtp_user_name'],
+    :password             => ENV['smtp_password'],
+    :authentication       => ENV['smtp_authentication'],
+    :enable_starttls_auto => true
+  }
+
 end
