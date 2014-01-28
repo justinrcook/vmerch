@@ -8,7 +8,7 @@
   = @email.email
 %p
   %b Message:
-  = @email.message
+= simple_format @email.message
 
 = link_to 'Edit', edit_email_path(@email)
 \|
