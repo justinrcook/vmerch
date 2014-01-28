@@ -5,7 +5,7 @@ class DesignsController < ApplicationController
   # GET /designs
   # GET /designs.json
   def index
-    @designs = Design.all
+    @designs = Design.order('updated_at DESC').includes(:category)
   end
 
   # GET /designs/1
