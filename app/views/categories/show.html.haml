@@ -3,7 +3,7 @@
 - if @category.single_column?
 	= render @category.designs
 - elsif @category.two_column?
-	.two_column
+	.two_column{ data: { columns: true } }
 		- @category.designs.each do |design|
 			= render design
 
