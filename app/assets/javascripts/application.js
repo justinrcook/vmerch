@@ -16,8 +16,7 @@
 //= require bootstrap/button
 //= require bootstrap/collapse
 //= require bootstrap/transition
-//= require masonry.pkgd.min.3.1.3
-//= require imagesloaded.pkgd.min.3.0.4.js
+//= require salvattore.min.1.0.5
 //= require waypoints
 //= require waypoints-sticky
 //= require_tree .
