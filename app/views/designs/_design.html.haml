@@ -1,5 +1,4 @@
-.panel.panel-default
-	.panel-body
-		= image_tag design.image, alt: design.name, class: 'img-responsive'
-	.panel-footer
-		= design.description
+.thumbnail
+	= image_tag design.image, alt: design.name, class: 'img-responsive'
+	.caption
+		%p= design.description

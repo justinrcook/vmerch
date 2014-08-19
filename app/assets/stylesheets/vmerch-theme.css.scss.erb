@@ -1,5 +1,5 @@
 // Google Webfonts Lato & Lato Light
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
+//@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
 
 
 // Bootstrap Variables
@@ -32,6 +32,10 @@ $font-size-base: 16px !default;
 // Navbar
 // -------------------------
 $navbar-border-radius: 0;
+
+// Thumbnail
+// -------------------------
+$thumbnail-bg: #fff;
 
 // Alerts
 // -------------------------
@@ -112,7 +116,6 @@ h1,h2,h3,h4,h5,h6 {
 	color: $brand-primary;
 }
 
-
 // Profile Photo
 // -------------------------
 img.profile-photo {
@@ -170,12 +173,31 @@ footer {
 
 // Two column design layout
 // -------------------------
-.two_column {
-	.panel {
-		width: 48%;
+.column 		{ float: left;	}
+.size-1of1	{ width: 100%;	}
+.size-1of2	{ width: 50%;		}
+
+@media screen and (max-width: 768px) {
+	.two_column[data-columns]::before {
+		content: '1 .column.size-1of1';
 	}
 }
 
+@media screen and (min-width: 769px) {
+	.two_column[data-columns]::before {
+		content: '2 .column.size-1of2';
+	}
+
+	.two_column {
+		.size-1of2:first-child {
+			.thumbnail { margin-right: 5px; }
+		}
+		.size-1of2:last-child {
+			.thumbnail { margin-left: 5px; }
+		}
+
+	}
+}
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
 	footer {
